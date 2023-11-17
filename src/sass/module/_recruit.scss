@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.recruit {
+	background-color: #fffdf5;
+	position: relative;
+}
+.recruit__bg-text {
+	width: rem(650);
+	position: absolute;
+	top: 5%;
+	left: 0;
+	@include mq(md){
+		width: rem(330);
+		top: 10%;
+	}
+}
+
+.recruit__inner {
+	padding-top: rem(240);
+	padding-bottom: 0;
+	@include mq(md){
+		padding-top: rem(196);
+	}
+}
+
+.recruit__text {
+	width: 70%;
+	margin-left: auto;
+	font-size: rem(40);
+	line-height: 1;
+	letter-spacing: 0.05em;
+	color: #fff;
+	margin-top: rem(40);
+	// font-family: $second-font;
+	font-weight: 700;
+	// font-style: italic;
+	@include mq(md){
+		width: 100%;
+		font-size: rem(20);
+		margin-top: rem(60);
+	}
+}
+.recruit__text span {
+	display: inline-block;
+	background: $blue;
+	margin-top: rem(14);
+	padding: rem(5) rem(10) rem(7);
+	@include mq(md){
+		margin-top: rem(7);
+	}
+}
+
+.recruit__link.link-area {
+	margin-top: rem(30);
+}
+
+.recruit__link.link-area span {
+	font-size: rem(16);
+}
+
+.recruit__slider .swiper-wrapper {
+	transition-timing-function: linear;
+}
+
+.recruit__cards {
+	margin-top: rem(70);
+	@include mq(md){
+		margin-top: rem(40);
+	}
+}
+
+.recruit__banner {
+	background: url(../images/common/recruit.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0 calc(50% - 50vw);
+	max-height: rem(400);
+	height: 100%;
+}
+
+.recruit__banner-text {
+	height: 100%;
+	text-align: center;
+	padding: rem(77) 0;
+}
+.recruit__banner-text p {
+	font-size: rem(100);
+	text-transform: capitalize;
+	// font-family: $en-font;
+	font-weight: 700;
+	// font-style: italic;
+	line-height: 1;
+	color: #fff;
+	@include mq(md){
+		font-size: rem(40);
+	}
+}
+
+.recruit__button {
+	text-align: center;
+	margin-top: rem(30);
+}
+
+.recruit__card .link-area {
+	align-self: flex-end;
+}
+
+.recruit__card .link-area span {
+	@include mq(md){
+		font-size: rem(13);
+	}
+}

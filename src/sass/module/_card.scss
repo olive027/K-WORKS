@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.card,
+.swiper-slide {
+	width: min(calc((100vw - rem(10)) / 3),rem(400));
+	height: 100%;
+	background-color: #fff;
+	box-shadow: rem(3) rem(3) rem(3) #ccc;
+	overflow: hidden;
+	@include mq(md){
+		width: calc((100vw - rem(10)) / 2);
+	}
+}
+
+.card__image {
+	width: min(calc((100vw - rem(10)) / 3),rem(400));
+	@include mq(md){
+		width: calc((100vw - rem(10)) / 2);
+	}
+}
+
+.card__image img,
+.swiper-slide img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.card__body {
+	padding: rem(10) rem(20);
+	font-size: rem(18);
+	letter-spacing: 0.05em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include mq(md){
+		flex-direction: column;
+		padding: rem(5) rem(10);
+		align-items: flex-start;
+	}
+}
+.card__category {
+	@include mq(md){
+		font-size: rem(14);
+	}
+}
+
+.card__info {
+	font-size: rem(15);
+	@include mq(md){
+		font-size: rem(13);
+	}
+}

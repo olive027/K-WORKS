@@ -1,0 +1,100 @@
+<section class="product">
+      <p class="product__bg-text bg-text">product</p>
+      <div class="product__inner inner">
+        <h2 class="product__title section-title section-title--center">product</h2>
+        <p class="section-subtitle section-subtitle--center">取扱製品</p>
+        <ul class="product__items">
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product01.png" alt="電球の画像">
+              </div>
+              <div class="product__category">LED照明</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product02.jpg" alt="電球の画像">
+              </div>
+              <div class="product__category">電子ブレーカー</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product03.jpg" alt="電球の画像">
+              </div>
+              <div class="product__category">蓄熱式暖房器</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product04.jpg" alt="電球の画像">
+              </div>
+              <div class="product__category">遠隔監視システム</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product05.jpg" alt="電球の画像">
+              </div>
+              <div class="product__category">空調制御システム</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product06.jpg" alt="電球の画像">
+              </div>
+              <div class="product__category">防犯カメラ</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product07.png" alt="電球の画像">
+              </div>
+              <div class="product__category">地震感知リレー</div>
+            </a>
+          </li>
+          <li class="product__item">
+            <a href="" class="product__link">
+              <div class="product__image">
+                <img src="./assets/images/common/product/product08.jpg" alt="電球の画像">
+              </div>
+              <div class="product__category">災害備蓄品</div>
+            </a>
+          </li>
+        </ul>
+        <div class="product__item-link link-area">
+          <a href="">
+            <span>製品一覧へ</span>
+            <span class="link-area--btn"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="works">
+      <p class="works__bg-text bg-text">works</p>
+      <div class="works__inner inner">
+        <h2 class="works__title section-title">works</h2>
+        <p class="section-subtitle">導入実績</p>
+        <ul class="works__list">
+          <li class="works__item">
+            <div class="wprks__image">
+              <img src="./assets/images/common/works/works01.jpg" alt="works1枚目">
+            </div>
+            <div class="works__body">
+              <div class="works__head">
+                <span>東京都</span>
+                <p>高圧受変電設備更新工事</p>
+              </div>
+              <div class="works__text"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>

@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.section-title {
+	font-size: rem(70);
+	letter-spacing: 0.03em;
+	text-align: left;
+	color: $blue;
+	text-transform: capitalize;
+	position: relative;
+	@include mq(md){
+		font-size: rem(38);
+	}
+}
+
+.section-title::after {
+	content: "";
+	width: rem(100);
+	height: rem(1);
+	background-color: $blue;
+	position: absolute;
+	top: 60%;
+	margin-left: rem(15);
+	@include mq(md){
+		width:rem(50);
+	}
+}
+
+.section-subtitle {
+	font-size: rem(16);
+	color: #a3bccc;
+	letter-spacing: 0.05em;
+	text-transform: capitalize;
+	margin-top: rem(13);
+	@include mq(md){
+		margin-top: rem(5);
+	}
+}
+
+.section-title--center {
+	text-align: center;
+	font-size: rem(32);
+}
+
+.section-subtitle--center {
+	text-align: center;
+}
+
+.section-title--center::after {
+	content: none;
+}

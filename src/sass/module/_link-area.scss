@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.link-area {
+	text-transform: capitalize;
+	font-size: rem(20);
+	font-weight: 400;
+	font-style: italic;
+	position: relative;
+	text-align: right;
+	@include mq(md){
+		font-size: rem(18);
+	}
+}
+
+.link-area a {
+	display: inline-flex;
+	align-items: center;
+	transition: transform .5s, opacity .5s ease-out;
+}
+
+.link-area a span {
+	transition: inherit;
+}
+
+/*hoverをしたら白円が大きくなる*/
+.link-area a:hover .link-area--btn::after {
+	transform: translate(-50%,-50%) scale(1);
+	opacity: 1;
+    // background-color:#fff;
+}
+.link-area a:hover .link-area--btn::before {
+	border-top-color: $blue;
+	border-right-color: $blue;
+	z-index: 2;
+}
+
+.link-area a:hover span:first-child {
+	opacity: .6;
+}

@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.service {
+	background: #f5f8fa;
+	position: relative;
+}
+
+.service__bg-text {
+	position: absolute;
+	top: 5%;
+	left: 0;
+	@include mq(md){
+		top: 5%;
+}
+}
+
+.service__inner {
+	padding-top: rem(240);
+	padding-bottom: rem(80);
+	@include mq(md){
+		padding-top: rem(196);
+    padding-bottom: rem(90);
+	}
+}
+
+.service__items {
+	margin-top: rem(40);
+	@include mq(md){
+		margin-top: rem(48);
+	}
+}
+
+.service__item {
+	max-width: rem(980);
+	margin-inline: auto;
+	@include mq(md){
+		max-width: rem(375);
+		width: 100%;
+	}
+}

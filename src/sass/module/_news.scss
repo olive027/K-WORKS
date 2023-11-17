@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.news {
+	position: relative;
+}
+.news__bg-text {
+	position: absolute;
+	top: 9%;
+	left: 0;
+	@include mq(md){
+		top: 15%;
+		left: initial;
+		right: 0;
+	}
+}
+
+.news__inner {
+	padding-top: rem(240);
+	padding-bottom: rem(170);
+	@include mq(md){
+		padding-top: rem(196);
+    padding-bottom: rem(90);
+	}
+}
+
+.news__list {
+	width: min(100%, rem(1000));
+	margin-inline: auto;
+	margin-top: rem(40);
+}
+
+.news__item {
+	border-bottom: 1px solid #7f9eba;
+}
+
+.news__item a {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: rem(30);
+	transition: box-shadow .5s, transform .5s, opacity .5s ease-out;
+	@include mq(md){
+		flex-direction: column;
+		padding: rem(15) rem(10);
+		align-items: flex-start;
+	}
+	&:hover {
+		box-shadow: rem(2) rem(10) rem(4) #a6b2bd;
+	}
+}
+
+.news__item:first-child {
+	border-top: 1px solid #7f9eba;
+}
+
+.news__item-head {
+	width: 40%;
+	@include mq(md){
+		width: 100%;
+		font-size: rem(13);
+	}
+}
+
+.news__item-category {
+	font-size: rem(14);
+	margin-left: rem(50);
+	padding: rem(2) rem(10);
+	background: #ccdded;
+	// color: #fff;
+	border-radius: 8px;
+	display: inline-block;
+	@include mq(md){
+		font-size: rem(13);
+		padding: 0 rem(8);
+	}
+}
+
+.news__item-body {
+	width: 50%;
+	text-align: left;
+	letter-spacing: 0.03em;
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
+	@include mq(md){
+		width: 100%;
+		font-size: rem(15);
+		margin-top: rem(10);
+	}
+}
+
+// .news__item a .link-area--btn,
+// .news__item a .link-area--btn::before,
+// .news__item a .link-area--btn::after {
+// 	transition: inherit;
+// }
+
+/*hoverをしたら白円が大きくなる*/
+.news__item a:hover .link-area--btn::after {
+	transform: translate(-50%,-50%) scale(1);
+	opacity: 1;
+    // background-color:#fff;
+}
+.news__item a:hover .link-area--btn::before {
+	border-top-color: $blue;
+	border-right-color: $blue;
+	z-index: 2;
+}
+
+.news__item .link-area--btn {
+	@include mq(md){
+		align-self: flex-end;
+		width: rem(30);
+		height: rem(30);
+	}
+}
+
+.news .item__link span:first-child {
+	font-style: normal;
+}

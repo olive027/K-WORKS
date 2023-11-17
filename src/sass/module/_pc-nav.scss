@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.pc-nav__inner,
+.pc-nav__items,
+.pc-nav__item {
+	height: inherit;
+}
+
+.pc-nav__items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pc-nav__item:not(:first-child) {
+	margin-left: rem(40);
+}
+
+.pc-nav__item a {
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $blue;
+	font-size: rem(20);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.pc-nav__item:last-child a {
+	background: $blue;
+	color: #fff;
+	padding-right:rem(28);
+	padding-left:rem(28);
+	border-radius: 40px;
+}
+
+.pc-nav__item a:hover {
+	opacity: .5;
+}

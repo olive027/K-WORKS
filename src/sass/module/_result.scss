@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.works {
+	position: relative;
+}
+
+.works__bg-text {
+	position: absolute;
+	right: 0;
+	top: -2%;
+	width: 45%;
+}
+
+.works__inner {
+	padding-top: rem(192);
+	padding-bottom: rem(80);
+	@include mq(md){
+		padding-top: rem(60);
+		padding-bottom: rem(60);
+	}
+}
