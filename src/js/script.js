@@ -50,6 +50,21 @@ $('.js-hamburger').click(function(){
 	// $('.js-sp-nav').fadeToggle(600);
 	$('html').toggleClass('is-fixed');　//ハンバーガー展開時に背景を固定
 	$('.js-sp-nav').toggleClass('is-active'); //右からメニューが出てくる等の場合はこっちの記述
+});
+
+// mv アニメーション
+gsap.fromTo(".mv__bg-circle", {
+  autoAlpha: 0
+},
+{
+	autoAlpha: 1,
+	delay: 2,
+	ease: Power4.easeIn,
+  stagger: {
+    each: 0.5, // 0.5秒遅れて順番に再生
+		from: "random",
+  }
 })
 
 });
+

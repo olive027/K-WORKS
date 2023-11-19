@@ -1,0 +1,75 @@
+@use 'global' as *;
+
+.bg-circle {
+	background: -moz-linear-gradient(38deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	background: -webkit-linear-gradient(38deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	background: linear-gradient(38deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	width: rem(150);
+	height: rem(150);
+	border-radius: 50%;
+	position: relative;
+}
+
+.bg-circle--small {
+	background: -moz-linear-gradient(50deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	background: -webkit-linear-gradient(50deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	background: linear-gradient(50deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	width: rem(70);
+	height: rem(70);
+	border-radius: 50%;
+}
+
+.bg-circle-1 {
+	position: absolute;
+	top: 30%;
+	right: 20%;
+	
+}
+
+.bg-circle-2 {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+}
+
+.bg-circle-3 {
+	position: absolute;
+	top: 78%;
+	left: 30%;
+}
+
+.bg-circle-4 {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+}
+
+.bg-circle-5 {
+	position: absolute;
+	top: 80%;
+	left: 10%;
+}
+
+.bg-circle-6 {
+	position: absolute;
+	top: 70%;
+	left: 60%;
+}
+
+.bg-circle-7 {
+	position: absolute;
+	top: 40%;
+	left: 47%;
+}
+
+.bg-circle-8 {
+	position: absolute;
+	top: 10%;
+	left: 60%;
+}
+
+.bg-circle-9 {
+	position: absolute;
+	top: 47%;
+	left: 14%;
+}
