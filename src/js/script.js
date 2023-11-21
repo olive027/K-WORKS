@@ -53,18 +53,47 @@ $('.js-hamburger').click(function(){
 });
 
 // mv アニメーション
-gsap.fromTo(".mv__bg-circle", {
+// 対象の要素を取得
+const paragraph = document.querySelector(".mv__title-left");
+
+// テキストコンテンツを取得
+const textContent = paragraph.textContent;
+
+// テキストコンテンツを一文字ずつ分割して<span>タグで囲んで新しい文字列を作成
+const newTextContent = [...textContent]
+  .map((char) => `<span>${char}</span>`)
+  .join("");
+// 新しい文字列をHTMLに挿入
+paragraph.innerHTML = newTextContent;
+const jsText = ".mv__title-left span";
+
+gsap.set(".mv__bg-circle", {
   autoAlpha: 0
-},
-{
+});
+gsap.set(jsText, {
+	autoAlpha: 0, // アニメーション開始前は透明
+	y: 50, // 20px下に移動
+});
+
+var tl = gsap.timeline({repeat: -1});
+
+tl.to(".mv__bg-circle",{
 	autoAlpha: 1,
 	delay: 2,
-	ease: Power4.easeIn,
+	ease: "power4.inOut",
   stagger: {
-    each: 0.5, // 0.5秒遅れて順番に再生
+		// each: 0.5, // 0.5秒遅れて順番に再生
+		amount: 2,
 		from: "random",
   }
 })
+.to(jsText, {
+	  autoAlpha: 1, // アニメーション後は出現(透過率0)
+    // y: 0, // 20px上に移動
+    // repeat: -1, // リピート無限
+    // repeatDelay: 2, // 1.2秒遅れでリピート
+    stagger: 0.1, // 0.2秒遅れて順番に再生
+  },	"-=1");
 
 });
 
