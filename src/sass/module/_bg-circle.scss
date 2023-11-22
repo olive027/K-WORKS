@@ -8,6 +8,7 @@
 	height: rem(150);
 	border-radius: 50%;
 	position: relative;
+	transition: translate 5s cubic-bezier(0, 0.91, 1, 1);
 }
 
 .bg-circle--small {
@@ -17,37 +18,49 @@
 	width: rem(70);
 	height: rem(70);
 	border-radius: 50%;
+	transition: translate 5s cubic-bezier(0, 0.91, 1, 1);
 }
 
 .bg-circle-1 {
 	position: absolute;
 	top: 30%;
 	right: 20%;
-	
+	@include mq(md){
+		width: rem(100);
+		height: rem(100);
+		top: 55%;
+		right: 0%;
+	}
 }
 
 .bg-circle-2 {
 	position: absolute;
 	top: 10%;
 	left: 20%;
-	width: rem(180);
-	height: rem(180);
+	width: rem(210);
+	height: rem(210);
 }
 
 .bg-circle-3 {
 	position: absolute;
 	top: 78%;
 	left: 30%;
-	width: rem(210);
-	height: rem(210);
+	width: rem(230);
+	height: rem(230);
+	@include mq(md){
+		width: rem(130);
+		height: rem(130);
+		top: 91%;
+		left: 36%;
+	}
 }
 
 .bg-circle-4 {
 	position: absolute;
 	top: 72%;
 	right: 8%;
-	width: rem(120);
-	height: rem(120);
+	width: rem(150);
+	height: rem(150);
 }
 
 .bg-circle-5 {
