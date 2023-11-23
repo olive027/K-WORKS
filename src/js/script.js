@@ -137,10 +137,6 @@ const jsText2 = ".mv__title-right span";
 gsap.set(".mv__bg-circle", {
   autoAlpha: 0
 });
-gsap.set([jsText, jsText2], {
-	autoAlpha: 0, // アニメーション開始前は透明
-	y: 50, // 20px下に移動
-});
 
 var tl = gsap.timeline();
 
@@ -155,83 +151,84 @@ tl.to(".mv__bg-circle",{
   }
 })
 .to(".bg-circle-1",{
-	y: -20,// 20px上に移動
+	y: -20,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 2.3,
 	ease: "none",
 }, "<")
 .to(".bg-circle-2",{
-	y: 20,// 20px上に移動
+	y: 20,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 1.8,
 	ease: "none",
 }, "<")
 .to(".bg-circle-3",{
-	y: 30,// 20px上に移動
+	y: 30,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 2.2,
 	ease: "none",
 }, "<")
 .to(".bg-circle-5",{
-	y: 10,// 20px上に移動
+	y: 10,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 1.8,
 	ease: "none",
 }, "<")
 .to(".bg-circle-6",{
-	y: -30,// 20px上に移動
+	y: -30,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 2,
 	ease: "none",
 }, "<")
 .to(".bg-circle-8",{
-	y: -20,// 20px上に移動
+	y: -20,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 1.9,
 	ease: "none",
 }, "<")
 .to(".bg-circle-7",{
-	y: -30,// 20px上に移動
+	y: -30,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 2.1,
 	ease: "none",
 }, "<")
 .to(".bg-circle-4",{
-	y: 10,// 20px上に移動
+	y: 10,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 1.8,
 	ease: "none",
 }, "<")
 .to(".bg-circle-9",{
-	y: -10,// 20px上に移動
+	y: -10,
   repeat: -1, // リピート無限
 	yoyo: true,
 	duration: 1.8,
 	ease: "none",
 }, "<")
-.to(jsText, {
-	  autoAlpha: 1, // アニメーション後は出現(透過率0)
-    // y: 0, // 20px上に移動
-    // repeat: -1, // リピート無限
-    // repeatDelay: 2, // 1.2秒遅れでリピート
-    stagger: 0.1, // 0.2秒遅れて順番に再生
+.fromTo(jsText, {
+		autoAlpha: 0, // アニメーション後は出現(透過率0)
+    yPercent: -100,
+	},{
+    autoAlpha: 1,
+		y: "0%",
+		stagger: 0.1, // 0.2秒遅れて順番に再生
   },	"-=5%")
-	.to(jsText2, {
+.fromTo(jsText2, {
+		autoAlpha: 0, // アニメーション後は出現(透過率0)
+    y: "-100%",
+},{
 	  autoAlpha: 1, // アニメーション後は出現(透過率0)
-    // y: 0, // 20px上に移動
-    // repeat: -1, // リピート無限
-    // repeatDelay: 2, // 1.2秒遅れでリピート
+    yPercent: -100,
     stagger: 0.1, // 0.2秒遅れて順番に再生
   },	"-=5%");
-
 
 });
 

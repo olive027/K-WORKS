@@ -1,28 +1,30 @@
 @use 'global' as *;
 
 .bg-circle {
-	background: -moz-linear-gradient(38deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
-	background: -webkit-linear-gradient(38deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
-	background: linear-gradient(38deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	background: -moz-linear-gradient(38deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
+	background: -webkit-linear-gradient(38deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
+	background: linear-gradient(38deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
 	width: rem(150);
 	height: rem(150);
 	border-radius: 50%;
 	position: relative;
 	transition: translate 5s cubic-bezier(0, 0.91, 1, 1);
+	z-index: -1;
 }
 
 .bg-circle--small {
-	background: -moz-linear-gradient(50deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
-	background: -webkit-linear-gradient(50deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
-	background: linear-gradient(50deg, rgba(201, 235, 251, 1), rgba(253, 255, 199, 1) 47%, rgba(251, 239, 216, 1) 67%, rgba(182, 224, 255, 1) 98%);
+	background: -moz-linear-gradient(50deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
+	background: -webkit-linear-gradient(50deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
+	background: linear-gradient(50deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
 	width: rem(70);
 	height: rem(70);
 	border-radius: 50%;
 	transition: translate 5s cubic-bezier(0, 0.91, 1, 1);
+	z-index: -1;
 }
 
 .bg-circle-1 {
-	position: absolute;
+	position: fixed;
 	top: 30%;
 	right: 20%;
 	@include mq(md){
@@ -34,7 +36,7 @@
 }
 
 .bg-circle-2 {
-	position: absolute;
+	position: fixed;
 	top: 10%;
 	left: 20%;
 	width: rem(210);
@@ -42,7 +44,7 @@
 }
 
 .bg-circle-3 {
-	position: absolute;
+	position: fixed;
 	top: 78%;
 	left: 30%;
 	width: rem(230);
@@ -56,7 +58,7 @@
 }
 
 .bg-circle-4 {
-	position: absolute;
+	position: fixed;
 	top: 72%;
 	right: 8%;
 	width: rem(150);
@@ -64,7 +66,7 @@
 }
 
 .bg-circle-5 {
-	position: absolute;
+	position: fixed;
 	top: 80%;
 	left: 10%;
 	width: rem(110);
@@ -72,7 +74,7 @@
 }
 
 .bg-circle-6 {
-	position: absolute;
+	position: fixed;
 	top: 70%;
 	left: 60%;
 	width: rem(50);
@@ -80,13 +82,13 @@
 }
 
 .bg-circle-7 {
-	position: absolute;
+	position: fixed;
 	top: 40%;
 	left: 47%;
 }
 
 .bg-circle-8 {
-	position: absolute;
+	position: fixed;
 	top: 10%;
 	left: 60%;
 	width: rem(100);
@@ -94,7 +96,7 @@
 }
 
 .bg-circle-9 {
-	position: absolute;
+	position: fixed;
 	top: 47%;
 	left: 14%;
 	width: rem(100);
