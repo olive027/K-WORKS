@@ -2,39 +2,42 @@
 
 .service {
 	background: #f5f8fa;
+	border-radius: 0 rem(100) rem(100) 0;
 	position: relative;
+	@include mq(md){
+		border-radius: 0 rem(60) rem(60) 0;
+	}
 }
 
 .service__bg-text {
 	position: absolute;
-	top: 5%;
+	top: 4%;
 	left: 0;
 	@include mq(md){
-		top: 5%;
+		top: 2%;
 }
 }
 
 .service__inner {
 	padding-top: rem(240);
-	padding-bottom: rem(80);
+	padding-bottom: rem(180);
 	@include mq(md){
-		padding-top: rem(196);
+		padding-top: rem(120);
     padding-bottom: rem(90);
 	}
 }
 
 .service__items {
-	margin-top: rem(40);
+	margin-top: rem(120);
 	@include mq(md){
-		margin-top: rem(48);
+		margin-top: rem(80);
 	}
 }
 
 .service__item {
-	max-width: rem(980);
-	margin-inline: auto;
+	max-width: rem(1200);
+	// margin-left: 0;
 	@include mq(md){
-		max-width: rem(375);
 		width: 100%;
 	}
 }

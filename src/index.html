@@ -24,6 +24,7 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
+<link rel="stylesheet" href="https://use.typekit.net/ice3hnf.css">
 <!-- fontawesome -->
 <script src="https://kit.fontawesome.com/7e402f9321.js" crossorigin="anonymous"></script>
 <!-- Adobe font -->
@@ -114,29 +115,31 @@
           <img src="./assets/images/common/about02.jpg" alt="about画像右">
         </div> -->
         <div class="about__body">
-          <h2 class="about__title section-title">常にお客様と</h2>
+          <h2 class="about__title section-title js-section-title">常にお客様と</h2>
           <p class="section-subtitle">企業理念</p>
           <div class="about__text">
             <p>私たちはクライアントの企業価値向上を最優先としています。<br>効果的な戦略の策定を通じて、持続可能で成長力のある企業を支援します。
             </p>
             <p>そのために、クライアントのニーズを理解し、信頼を築くことを大切にし、相手目線のアプローチで企業の課題に真摯に向き合います。<br>上流から下流まで、オールフェーズでお客様の課題解決に全力を尽くすことをお約束します。
             </p>
-            <p><span>変化</span>を恐れず、<br class="u-mobile"><span>未来</span>をつくる。
+            <div class="about__link link-area">
+              <a href="">
+                <span>about us</span>
+                <span class="link-area--btn"></span>
+              </a>
+            </div>
+            <p class="about__text-main"><span>変化</span>を恐れず、<br class="u-mobile"><span>未来</span>をつくる
             </p>
+            <p class="about__text-en">Change&nbsp;the&nbsp;Future&nbsp;<br class="u-mobile">Make&nbsp;the&nbsp;Future</p>
           </div>
-          <div class="about__link link-area">
-            <a href="">
-              <span>about us</span>
-              <span class="link-area--btn"></span>
-            </a>
-          </div>
+          
         </div>
       </div>
     </section>
     <section class="service">
       <p class="service__bg-text bg-text">service</p>
       <div class="service__inner inner">
-        <h2 class="service__title section-title">service</h2>
+        <h2 class="service__title section-title js-section-title">service</h2>
         <p class="section-subtitle">事業内容</p>
         <div class="service__items">
           <div class="service__item item">
@@ -193,7 +196,7 @@
     <section class="news">
       <p class="news__bg-text bg-text">news</p>
       <div class="news__inner inner">
-        <h2 class="news__title section-title">news</h2>
+        <h2 class="news__title section-title js-section-title">news</h2>
         <p class="news-subtitle section-subtitle">新着情報</p>
         <ul class="news__list">
           <li class="news__item">
@@ -244,7 +247,7 @@
     <section class="recruit">
       <p class="recruit__bg-text bg-text">recruit</p>
       <div class="recruit__inner inner">
-        <h2 class="recruit__title section-title">recruit</h2>
+        <h2 class="recruit__title section-title js-section-title">recruit</h2>
         <p class="recruit-subtitle section-subtitle">採用について</p>
         <div class="recruit__text">
           <span>私たちは、</span><br><span>お客様のために</span><br><span>共に考え、常に前進し続ける</span><br><span>意欲のある仲間を募集しています</span>
@@ -369,12 +372,15 @@
         <ul class="footer-nav__items"><a href="">contact</a></ul>
       </nav>
     </div>
-    <small class="footer__copyright">&copy;2023&nbsp;K-WORKS&nbsp;All&nbsp;Rights&nbsp;Reserved.</small>
+    <small class="footer__copyright">&copy;2023&nbsp;K-WORKS</small>
   </footer>
-  <!-- JavaScript -->
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </body>
 

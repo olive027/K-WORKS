@@ -2,7 +2,11 @@
 
 .recruit {
 	background-color: #fffdf5;
+	border-radius: 0 rem(100) rem(100) 0;
 	position: relative;
+	@include mq(md){
+		border-radius: 0 rem(60) rem(60) 0;
+	}
 }
 .recruit__bg-text {
 	width: rem(650);
@@ -11,7 +15,7 @@
 	left: 0;
 	@include mq(md){
 		width: rem(330);
-		top: 10%;
+		top: 4%;
 	}
 }
 
@@ -19,25 +23,24 @@
 	padding-top: rem(240);
 	padding-bottom: 0;
 	@include mq(md){
-		padding-top: rem(196);
+		padding-top: rem(120);
 	}
 }
 
 .recruit__text {
 	width: 70%;
-	margin-left: auto;
 	font-size: rem(40);
 	line-height: 1;
 	letter-spacing: 0.05em;
 	color: #fff;
-	margin-top: rem(40);
+	margin-top: rem(120);
 	// font-family: $second-font;
 	font-weight: 700;
 	// font-style: italic;
 	@include mq(md){
 		width: 100%;
 		font-size: rem(20);
-		margin-top: rem(60);
+		margin-top: rem(80);
 	}
 }
 .recruit__text span {
@@ -51,11 +54,19 @@
 }
 
 .recruit__link.link-area {
-	margin-top: rem(30);
+	margin-top: rem(80);
+	text-align: left;
+	@include mq(md){
+		margin-top: rem(48);
+	}
 }
 
 .recruit__link.link-area span {
 	font-size: rem(16);
+}
+
+.recruit__slider.swiper {
+	margin: 0 calc(50% - 50vw);
 }
 
 .recruit__slider .swiper-wrapper {
@@ -63,7 +74,7 @@
 }
 
 .recruit__cards {
-	margin-top: rem(70);
+	margin-top: rem(80);
 	@include mq(md){
 		margin-top: rem(40);
 	}
@@ -76,6 +87,10 @@
 	margin: 0 calc(50% - 50vw);
 	max-height: rem(400);
 	height: 100%;
+	border-radius: 0 0 rem(100) 0;
+	@include mq(md){
+		border-radius: 0 0 rem(60) 0;
+	}
 }
 
 .recruit__banner-text {

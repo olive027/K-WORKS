@@ -48,11 +48,11 @@ $(window).scroll(function(){
 $('.js-hamburger').click(function(){
 	$('.js-hamburger').toggleClass('is-active');
 	// $('.js-sp-nav').fadeToggle(600);
-	$('html').toggleClass('is-fixed');　//ハンバーガー展開時に背景を固定
+	$('html').toggleClass('is-fixed'); //ハンバーガー展開時に背景を固定
 	$('.js-sp-nav').toggleClass('is-active'); //右からメニューが出てくる等の場合はこっちの記述
 });
 
-// mv アニメーション
+// section-titleアニメーション
 // 対象の要素を取得
 // const paragraph = document.querySelector(".mv__title-left");
 
@@ -80,6 +80,7 @@ $('.js-hamburger').click(function(){
 // paragraph2.innerHTML = newTextContent2;
 // const jsText2 = ".mv__title-right span";
 
+// mvタイトルアニメーション(上段)
   const target = document.querySelectorAll(".mv__title-left");
   target.forEach( function (target) {
       let nodes = [...target.childNodes];
@@ -104,9 +105,9 @@ $('.js-hamburger').click(function(){
 		});
 		target.innerHTML = textBox;
 });
-
 const jsText = ".mv__title-left span";
 
+// mvタイトルアニメーション(下段)
 const target2 = document.querySelectorAll(".mv__title-right");
   target2.forEach( function (target2) {
       let nodes2 = [...target2.childNodes];
@@ -125,19 +126,23 @@ const target2 = document.querySelectorAll(".mv__title-right");
 				// そのまま連結
 				textBox2 = textBox2 + nodes2.outerHTML;
 			} else { // テキストではなく、br要素などspan要素以外の要素を持つ
-				// そのまま連結　※br要素などをspan要素とは別に処理する場合はここに書く
+				// そのまま連結 ※br要素などをspan要素とは別に処理する場合はここに書く
 				textBox2 = textBox + nodes2.outerHTML;
 			}
 		});
 		target2.innerHTML = textBox2;
 });
-
 const jsText2 = ".mv__title-right span";
 
+
+let bgText = [...document.querySelectorAll(".bg-text")];
+let sectionSubTitle = [...document.querySelectorAll(".section-subtitle")];
+//circleの初期値
 gsap.set(".mv__bg-circle", {
   autoAlpha: 0
 });
 
+//timeline
 var tl = gsap.timeline();
 
 tl.to(".mv__bg-circle",{
@@ -229,6 +234,48 @@ tl.to(".mv__bg-circle",{
     yPercent: -100,
     stagger: 0.1, // 0.2秒遅れて順番に再生
   },	"-=5%");
+
+	// let sectionTitles = document.querySelectorAll(".js-section-title");
+	// sectionTitles.forEach((sectionTitle) => {
+	// 		ScrollTrigger.create({
+	// 				trigger: sectionTitle,
+	// 				start: "top 80%",
+	// 				toggleClass: {
+	// 					targets: sectionTitle,
+	// 					opacity: 1,
+	// 					className: "is-active",
+	// 				},
+	// 				once: true,
+	// 		});
+	// });
+var tl2 = gsap.timeline;
+gsap.utils.toArray(".js-section-title").forEach((target) => {
+	tl2 ({
+		scrollTrigger: {
+			trigger: target,
+			start: "top 70%",
+			// markers: true,
+		}
+	})
+	.fromTo (target, 1.3, {
+		autoAlpha: 0,
+		y: 20,
+	},{
+		autoAlpha: 1,
+		y: 0,
+	})
+});
+
+
+
+
+
+
+
+
+
+
+
 
 });
 

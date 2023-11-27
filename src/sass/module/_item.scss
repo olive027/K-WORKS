@@ -2,29 +2,40 @@
 
 .item {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: flex-start;
+	gap: 60px;
+	margin-left: calc(50% - 50vw);
 	// box-shadow: rem(2) rem(2) rem(2) #cbd3d6;
 	position: relative;
+	@include mq(md){
+		flex-direction: column;
+		gap: 0;
+	}
+}
+
+.item:nth-child(n+2) {
+	margin-top: rem(140);
+	@include mq(md){
+		margin-top: rem(50);
+	}
+}
+
+.item:nth-child(2) {
+	flex-direction: row-reverse;
+	margin-right: calc(50% - 50vw);
+	margin-left: auto;
 	@include mq(md){
 		flex-direction: column;
 	}
 }
 
-.item:nth-child(n+2) {
-	margin-top: rem(50);
-	@include mq(md){
-		margin-top: rem(25);
-	}
-}
-
 .item__image {
-	aspect-ratio: 450 / 320;
-	width: rem(450);
-	flex-shrink: 0;
+	aspect-ratio: 900 / 700;
+	width: 75%;
 	@include mq(md){
-		aspect-ratio: 335 / 220;
-		width: rem(335);
+		aspect-ratio: 360 / 280;
+		width: 96%;
 	}
 }
 
@@ -34,33 +45,67 @@
 	object-fit: cover;
 }
 
+.item:nth-child(2) .item__image {
+	margin-left: auto;
+}
+
+.item:first-child .item__image img,
+.item:nth-child(3) .item__image img {
+	border-radius: 0 60px 60px 0;
+}
+.item:nth-child(2) .item__image img {
+	border-radius: 60px 0 0 60px;
+}
+
 .item__body {
-	padding: rem(30) rem(40);
+	width: 58.3333%;
+	padding: rem(30) 0 0 0;
 	margin-top: rem(50);
 	border-top: 1px solid rgba(163, 188, 204, 0.5);
+	position: relative;
 	@include mq(md){
-		margin-top: rem(60);
-		// border-top: none;
-		padding: rem(20) 0;
+		width: 100%;
+		margin-top: rem(40);
+		padding: rem(20) 0 0 rem(20);
+		margin-left: initial;
+		text-align: justify;
 	}
 }
 
-.item::before {
+.item__body::before {
 	content: "01";
 	font-size: rem(24);
 	color: #a3bccc;
 	position: absolute;
-	top: 2%;
+	top: -10%;
 	right: 0;
 	@include mq(md){
-		top: 43%;
-		left: 0;
+		left: rem(20);
 		font-size: rem(18);
 	}
 }
 
+.item:nth-child(2) .item__body::before {
+	content: "02";
+	left: 0;
+}
+
+.item:nth-child(3) .item__body::before {
+	content: "03";
+	@include mq(md){
+		left: rem(20);
+	}
+}
+
+.item:nth-child(2) .item__body {
+	padding: rem(30) 0 0 0;
+	@include mq(md){
+		padding: rem(20) 0 0 0;
+	}
+}
+
 .item__title {
-	font-size: rem(28);
+	font-size: rem(36);
 	@include mq(md){
 		font-size: rem(22);
 	}
@@ -71,34 +116,14 @@
 }
 
 .item__text {
-	font-size: rem(16);
+	font-size: rem(20);
+	font-weight: 400;
 	letter-spacing: 0.05em;
 	line-height: 1.7;
 	padding-top: rem(20);
 	@include mq(md){
 		padding-top: rem(10);
-	}
-}
-
-.item:nth-child(2) {
-	flex-direction: row-reverse;
-	@include mq(md){
-		flex-direction: column;
-	}
-}
-
-.item:nth-child(2)::before {
-	content: "02";
-	left: 0;
-	@include mq(md){
-		top: 46%;
-	}
-}
-
-.item:nth-child(3)::before {
-	content: "03";
-	@include mq(md){
-		top: 43%;
+		font-size: rem(16);
 	}
 }
 

@@ -2,18 +2,11 @@
 
 .card,
 .swiper-slide {
-	width: min(calc((100vw - rem(10)) / 3),rem(400));
+	// width: min(calc((100vw - rem(30)) / 4),rem(400));
 	height: 100%;
 	background-color: #fff;
 	box-shadow: rem(3) rem(3) rem(3) #ccc;
 	overflow: hidden;
-	@include mq(md){
-		width: calc((100vw - rem(10)) / 2);
-	}
-}
-
-.card__image {
-	width: min(calc((100vw - rem(10)) / 3),rem(400));
 	@include mq(md){
 		width: calc((100vw - rem(10)) / 2);
 	}

@@ -1,9 +1,9 @@
 @use 'global' as *;
 
 .bg-circle {
-	background: -moz-linear-gradient(38deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
-	background: -webkit-linear-gradient(38deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
-	background: linear-gradient(38deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
+	background: -moz-linear-gradient(38deg, rgba(201, 235, 251, .6), rgba(253, 255, 199, .6) 47%, rgba(251, 239, 216, .6) 67%, rgba(182, 224, 255, .6) 98%);
+	background: -webkit-linear-gradient(38deg, rgba(201, 235, 251, .6), rgba(253, 255, 199, .6) 47%, rgba(251, 239, 216, .6) 67%, rgba(182, 224, 255, .6) 98%);
+	background: linear-gradient(38deg, rgba(201, 235, 251, .6), rgba(253, 255, 199, .6) 47%, rgba(251, 239, 216, .6) 67%, rgba(182, 224, 255, .6) 98%);
 	width: rem(150);
 	height: rem(150);
 	border-radius: 50%;
@@ -13,9 +13,9 @@
 }
 
 .bg-circle--small {
-	background: -moz-linear-gradient(50deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
-	background: -webkit-linear-gradient(50deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
-	background: linear-gradient(50deg, rgba(201, 235, 251, .7), rgba(253, 255, 199, .7) 47%, rgba(251, 239, 216, .7) 67%, rgba(182, 224, 255, .7) 98%);
+	background: -moz-linear-gradient(50deg, rgba(201, 235, 251, .6), rgba(253, 255, 199, .6) 47%, rgba(251, 239, 216, .6) 67%, rgba(182, 224, 255, .6) 98%);
+	background: -webkit-linear-gradient(50deg, rgba(201, 235, 251, .6), rgba(253, 255, 199, .6) 47%, rgba(251, 239, 216, .6) 67%, rgba(182, 224, 255, .6) 98%);
+	background: linear-gradient(50deg, rgba(201, 235, 251, .6), rgba(253, 255, 199, .6) 47%, rgba(251, 239, 216, .6) 67%, rgba(182, 224, 255, .6) 98%);
 	width: rem(70);
 	height: rem(70);
 	border-radius: 50%;
