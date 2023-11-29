@@ -102,9 +102,9 @@
 	font-size: rem(60);
 	font-style: italic;
 	font-weight: 500;
-	white-space: nowrap;
 	margin-top: rem(80);
 	position: relative;
+	display: inline-block;
 	@include mq(md){
 		font-size: rem(34);
 		letter-spacing: normal;
@@ -120,9 +120,9 @@
 	background: $black;
 	position: absolute;
 	top: 55%;
-	left: 130%;
+	left: 102%;
 	@include mq(md){
-		left: 86%;
+		left: 100%;
     right: 0;
     top: 78%;
     width: 45px;
@@ -141,17 +141,16 @@
 .about__text-en {
 	font-family: "handsome-pro", sans-serif;
 	font-weight: 300;
-	font-size: rem(90);
-	white-space: nowrap;
+	font-size: rem(65);
 	line-height: 1;
-	margin-top: rem(-40);
+	margin-top: rem(-20);
 	text-indent: 1em;
 	color: rgba(188, 203, 230, .4);
 	@include mq(md){
 		font-size: rem(36);
 		text-align: center;
-		line-height: 2;
-    margin-top: rem(-110);
+		line-height: 1.8;
+    margin-top: rem(-98);
 	}
 }
 

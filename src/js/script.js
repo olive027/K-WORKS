@@ -54,34 +54,29 @@ $('.js-hamburger').click(function(){
 
 // section-titleアニメーション
 // 対象の要素を取得
-// const paragraph = document.querySelector(".mv__title-left");
+// var paragraph = document.querySelector(".mv__title-left");
 
 // // テキストコンテンツを取得
-// const textContent = paragraph.textContent;
+// var textContent = paragraph.innerText;
 
 // // テキストコンテンツを一文字ずつ分割して<span>タグで囲んで新しい文字列を作成
-// const newTextContent = [...textContent]
-//   .map((char) => `<span>${char}</span>`)
-//   .join("");
+// var newTextContent = textContent.split('').map((char) => `<span>${char}</span>`).join("");
 // // 新しい文字列をHTMLに挿入
 // paragraph.innerHTML = newTextContent;
-// const jsText = ".mv__title-left span";
 
-// const paragraph2 = document.querySelector(".mv__title-right");
+// var paragraph2 = document.querySelector(".mv__title-right");
 
 // // テキストコンテンツを取得
-// const textContent2 = paragraph2.textContent;
+// var textContent2 = paragraph2.innerText;
 
 // // テキストコンテンツを一文字ずつ分割して<span>タグで囲んで新しい文字列を作成
-// const newTextContent2 = [...textContent2]
-//   .map((char) => `<span>${char}</span>`)
-//   .join("");
+// var newTextContent2 = textContent2.split('').map((char) => `<span>${char}</span>`).join("");
 // // 新しい文字列をHTMLに挿入
 // paragraph2.innerHTML = newTextContent2;
 // const jsText2 = ".mv__title-right span";
-
+gsap.registerPlugin(ScrollTrigger);
 // mvタイトルアニメーション(上段)
-  const target = document.querySelectorAll(".mv__title-left");
+  const target = document.querySelectorAll(".mv__title");
   target.forEach( function (target) {
       let nodes = [...target.childNodes];
       let textBox = '';
@@ -105,38 +100,33 @@ $('.js-hamburger').click(function(){
 		});
 		target.innerHTML = textBox;
 });
-const jsText = ".mv__title-left span";
 
 // mvタイトルアニメーション(下段)
-const target2 = document.querySelectorAll(".mv__title-right");
-  target2.forEach( function (target2) {
-      let nodes2 = [...target2.childNodes];
-      let textBox2 = '';
-      nodes2.forEach( function (nodes2) {
-      if (nodes2.nodeType == 3) { //テキストの場合
-          let text2 = nodes2.textContent.replace(/\r?\n/g, ''); //テキストから改行コード削除
-					text2.split('').forEach(function (t, i) {
-						if (t !== " ") {
-								textBox2 += '<span>' + t + '</span>';
-						} else {
-							textBox2 += t;
-						}
-					})
-			} else if (nodes2.contains(nodes2) == true) { // テキストではなく、子ノード(=span要素)を持つ
-				// そのまま連結
-				textBox2 = textBox2 + nodes2.outerHTML;
-			} else { // テキストではなく、br要素などspan要素以外の要素を持つ
-				// そのまま連結 ※br要素などをspan要素とは別に処理する場合はここに書く
-				textBox2 = textBox + nodes2.outerHTML;
-			}
-		});
-		target2.innerHTML = textBox2;
-});
-const jsText2 = ".mv__title-right span";
+// var text = document.querySelectorAll(".mv__title-right");
+//   text.forEach( function (container) {
+//       let nodes = [...container.childNodes];
+//       let textBox = '';
+//       nodes.forEach( function (node) {
+//       if (node.nodeType == 3) { //テキストの場合
+//           let text = node.textContent.replace(/\r?\n/g, ''); //テキストから改行コード削除
+// 					text.split('').forEach(function (char, i) {
+// 						if (char !== " ") {
+// 								textBox += '<span>' + char + '</span>';
+// 						} else {
+// 							textBox += char;
+// 						}
+// 					});
+// 			} else if (node.contains(nodes) == true) { // テキストではなく、子ノード(=span要素)を持つ
+// 				// そのまま連結
+// 				textBox = textBox + node.outerHTML;
+// 			} else { // テキストではなく、br要素などspan要素以外の要素を持つ
+// 				// そのまま連結　※br要素などをspan要素とは別に処理する場合はここに書く
+// 				textBox = textBox + node.outerHTML;
+// 			}
+// 		});
+// 		container.innerHTML = textBox;
+// });
 
-
-let bgText = [...document.querySelectorAll(".bg-text")];
-let sectionSubTitle = [...document.querySelectorAll(".section-subtitle")];
 //circleの初期値
 gsap.set(".mv__bg-circle", {
   autoAlpha: 0
@@ -218,54 +208,59 @@ tl.to(".mv__bg-circle",{
 	duration: 1.8,
 	ease: "none",
 }, "<")
-.fromTo(jsText, {
-		autoAlpha: 0, // アニメーション後は出現(透過率0)
-    yPercent: -100,
-	},{
-    autoAlpha: 1,
-		y: "0%",
-		stagger: 0.1, // 0.2秒遅れて順番に再生
-  },	"-=5%")
-.fromTo(jsText2, {
-		autoAlpha: 0, // アニメーション後は出現(透過率0)
-    y: "-100%",
+.fromTo(".mv__title span", {
+    autoAlpha: 0,
+		y: '50px',
 },{
-	  autoAlpha: 1, // アニメーション後は出現(透過率0)
-    yPercent: -100,
-    stagger: 0.1, // 0.2秒遅れて順番に再生
-  },	"-=5%");
-
-	// let sectionTitles = document.querySelectorAll(".js-section-title");
-	// sectionTitles.forEach((sectionTitle) => {
-	// 		ScrollTrigger.create({
-	// 				trigger: sectionTitle,
-	// 				start: "top 80%",
-	// 				toggleClass: {
-	// 					targets: sectionTitle,
-	// 					opacity: 1,
-	// 					className: "is-active",
-	// 				},
-	// 				once: true,
-	// 		});
-	// });
-var tl2 = gsap.timeline;
-gsap.utils.toArray(".js-section-title").forEach((target) => {
-	tl2 ({
-		scrollTrigger: {
-			trigger: target,
-			start: "top 70%",
-			// markers: true,
-		}
-	})
-	.fromTo (target, 1.3, {
-		autoAlpha: 0,
-		y: 20,
-	},{
 		autoAlpha: 1,
-		y: 0,
-	})
+		y: '0px',
+		stagger: 0.1, // 0.2秒遅れて順番に再生
+  },"-=5%");
+// .fromTo(".mv__title-right span", {
+// 		autoAlpha: 0,// アニメーション後は出現(透過率0)
+//     y: '50px',
+// },{
+//     autoAlpha: 1,
+// 		y: '0px',
+// 		stagger: 0.1, // 0.2秒遅れて順番に再生
+//   },"-=5%");
+
+var sectionTitle = document.querySelectorAll('.js-section-title');
+sectionTitle.forEach((target) => {
+	// h2タグ内のテキストを一文字ずつ分割
+	target.innerHTML = target.textContent.replace(/\S/g,'<span>$&</span>')
 });
 
+gsap.utils.toArray(sectionTitle).forEach((t) => {
+
+	var tl2 = gsap.timeline();
+	tl2({
+		scrollTrigger: {
+			trigger: t,
+			start: "top 80%",
+			// markers: true,
+		}
+	}).fromTo(t, {
+		autoAlpha: 0,
+		y: "100%",
+	},{
+		autoAlpha: 1,
+		y: "0%",
+		stagger: 0.2,
+	});
+});
+
+gsap.from(".news", {
+  scrollTrigger: {
+    trigger: ".news",
+    start: "top center",
+    end: "bottom bottom",
+    scrub: true,
+  },
+  duration: 5,
+  backgroundColor: "#fff",
+  ease: "none",
+});
 
 
 
