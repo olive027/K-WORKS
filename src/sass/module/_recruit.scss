@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .recruit {
-	background-color: #fffdf5;
+	background-color: #fffae6;
 	border-radius: 0 rem(100) rem(100) 0;
 	position: relative;
 	@include mq(md){
@@ -54,10 +54,10 @@
 }
 
 .recruit__link.link-area {
-	margin-top: rem(80);
-	text-align: left;
+	margin-top: rem(48);
+	text-align: center;
 	@include mq(md){
-		margin-top: rem(48);
+		text-align: right;
 	}
 }
 

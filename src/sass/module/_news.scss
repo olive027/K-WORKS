@@ -26,7 +26,7 @@
 .news__list {
 	width: min(100%, rem(1000));
 	margin-inline: auto;
-	margin-top: rem(160);
+	margin-top: rem(120);
 	@include mq(md){
 		margin-top: rem(80);
 	}

@@ -113,27 +113,20 @@ tl.to(".mv__bg-circle",{
 	duration: 1.8,
 	ease: "none",
 }, "<")
-.fromTo(".mv__title span", {
+.fromTo(".mv__title span", { //MVタイトルアニメーション
     autoAlpha: 0,
 		y: '50px',
 },{
 		autoAlpha: 1,
 		y: '0px',
-		stagger: 0.1, // 0.1秒遅れて順番に再生
-  },"-=5%");
-
-	//======================== service背景色アニメーション=====================================================================
-//=====================================================================
-	gsap.from(".service", {
-		duration: 1,
-		backgroundColor: "transparent",
-		ease: "none",
-		scrollTrigger: {
-			trigger: ".service",
-			start: "top 90%",
-			end: "bottom bottom",
-			scrub: true,
-		},
+		stagger: 0.07, // 0.1秒遅れて順番に再生
+  },"-=5%")
+	.fromTo('.header', {
+		autoAlpha: 0,
+		y: 50,
+	},{
+		autoAlpha: 1,
+		y: 0,
 	});
 
 	//======================== section-titleアニメーション====================================================================
@@ -148,10 +141,10 @@ gsap.utils.toArray(sectionTitle).forEach((t) => {
 
 	gsap.fromTo( t.querySelectorAll("span"),{ //アニメーションを適用するspan要素を取得
 		autoAlpha: 0,
-		y: 30,
+		x: -50,
 	},{
 		autoAlpha: 1,
-		y: 0,
+		x: 0,
 		stagger: 0.1,
 		scrollTrigger: {
 			trigger: t,
@@ -173,7 +166,7 @@ gsap.utils.toArray('.bg-text').forEach((t) => {
 		x: 0,
 		scrollTrigger: {
 			trigger: t,
-			start: "top 80%",
+			start: "70% 80%",
 			// markers: true,
 		}
 	});
@@ -181,32 +174,107 @@ gsap.utils.toArray('.bg-text').forEach((t) => {
 
 //======================== about本文テキストアニメーション=======================================================================
 //=====================================================================
-var tl_2 = gsap.timeline();
-tl_2.fromTo('.about__text-p',{
+
+gsap.utils.toArray('.about__text-p').forEach((t) => {
+
+	gsap.fromTo(t,{
+		yPercent: 100,
+		// autoAlpha: 0,
+	},{
+		yPercent: -100,
+		// autoAlpha: 1,
+		// ease: "none",
+		scrollTrigger: {
+			trigger: t,
+			start: "top 70%",
+			end: "bottom top",
+			scrub: 2,
+		}
+	});
+	gsap.fromTo(t,{
+		autoAlpha: 0,
+	},{
+		autoAlpha: 1,
+		// ease: "none",
+		scrollTrigger: {
+			trigger: t,
+			start: "top 70%",
+			end: "bottom 60%",
+			scrub: 2,
+		}
+	});
+});
+
+// var tl_2 = gsap.timeline();
+
+gsap.fromTo('.about__text-main', {
 	autoAlpha: 0,
-	// y: 50,
-},{
-	autoAlpha: 1,
-	// y: 0,
-	stagger: 0.1,
-	scrollTrigger: {
-		trigger: ".about__text-p",
-		start: "top 80%",
-		scrub: true,
-	}
-})
-.fromTo('.about__text-main', {
-	autoAlpha: 0,
-	y: 50,
+	y: "100%",
 },{
 	autoAlpha: 1,
 	y: 0,
+	duration: 1.5,
+	scrollTrigger: {
+		trigger: ".about__text-main",
+		start: "top 80%",
+		// scrub: true,
+	}
+});
+
+//======================== service背景色アニメーション=====================================================================
+//=====================================================================
+gsap.from(".service", {
 	duration: 1,
-},"+=5");
+	backgroundColor: "transparent",
+	ease: "none",
+	scrollTrigger: {
+		trigger: ".service",
+		start: "top 90%",
+		end: "bottom bottom",
+		scrub: true,
+	},
+});
 
+// セレクタ ".js-trigger" で要素を取得
+// const items = gsap.utils.toArray(".js-image");
 
+// 各要素に対してアニメーションを設定
+// items.forEach((item) => {
+//   gsap.fromTo(
+//     item.querySelector("img"), // アニメーションを適用する画像要素を取得
+//     {
+//       yPercent: 50, // パララックス前の要素の位置
+//     },
+//     {
+//       yPercent: -50, // 上に要素の幅の1/5分移動
+//       ease: "none", // イージングなし
+//       scrollTrigger: {
+//         trigger: item, // アニメーションのトリガー要素
+//         start: "top bottom", // アニメーション開始位置
+//         end: "bottom top", // アニメーション終了位置
+//         scrub: 3, // 動作を遅らせる
+//       },
+//     }
+//   );
+// });
+//======================== service-body アニメーション=====================================================================
+//=====================================================================
+gsap.utils.toArray('.js-body').forEach((t) => {
 
-
+	gsap.fromTo( t,{
+		autoAlpha: 0,
+		y: 100,
+	},{
+		autoAlpha: 1,
+		y: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: t,
+			start: "top 60%",
+			markers: true,
+		}
+	});
+});
 
 
 
