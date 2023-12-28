@@ -20,7 +20,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 		breakpoints: {
 			// スライドの表示枚数：767px以上の場合
 			767: {
-				slidesPerView: 3,
+				slidesPerView: 4,
 			}
 		},
 		speed: 4000, // ループの時間

@@ -1,13 +1,18 @@
 @use "global" as *;
 
+.footer {
+	margin-top: rem(80);
+	margin-bottom: rem(80);
+	@include mq(md){
+		margin-top: rem(80);
+		margin-bottom: rem(80);
+	}
+}
+
 .footer__inner {
-	padding-top: rem(80);
-	padding-bottom: rem(80);
 	display: flex;
 	justify-content: space-between;
 	@include mq(md){
-		padding-top: rem(80);
-    padding-bottom: rem(80);
 		justify-content: flex-start;
 	}
 }

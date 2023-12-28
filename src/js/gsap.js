@@ -188,7 +188,7 @@ gsap.utils.toArray('.about__text-p').forEach((t) => {
 			trigger: t,
 			start: "top 70%",
 			end: "bottom top",
-			scrub: 2,
+			scrub: 1,
 		}
 	});
 	gsap.fromTo(t,{
@@ -200,7 +200,7 @@ gsap.utils.toArray('.about__text-p').forEach((t) => {
 			trigger: t,
 			start: "top 70%",
 			end: "bottom 60%",
-			scrub: 2,
+			scrub: 1,
 		}
 	});
 });
@@ -235,7 +235,7 @@ gsap.from(".service", {
 	},
 });
 
-// セレクタ ".js-trigger" で要素を取得
+// セレクタ ".js-image" で要素を取得
 // const items = gsap.utils.toArray(".js-image");
 
 // 各要素に対してアニメーションを設定
@@ -243,16 +243,16 @@ gsap.from(".service", {
 //   gsap.fromTo(
 //     item.querySelector("img"), // アニメーションを適用する画像要素を取得
 //     {
-//       yPercent: 50, // パララックス前の要素の位置
+//       yPercent: 0, // パララックス前の要素の位置
 //     },
 //     {
-//       yPercent: -50, // 上に要素の幅の1/5分移動
+//       yPercent: -30, // 上に要素の幅の1/5分移動
 //       ease: "none", // イージングなし
 //       scrollTrigger: {
 //         trigger: item, // アニメーションのトリガー要素
 //         start: "top bottom", // アニメーション開始位置
 //         end: "bottom top", // アニメーション終了位置
-//         scrub: 3, // 動作を遅らせる
+//         scrub: 1, // 動作を遅らせる
 //       },
 //     }
 //   );
@@ -271,7 +271,7 @@ gsap.utils.toArray('.js-body').forEach((t) => {
 		scrollTrigger: {
 			trigger: t,
 			start: "top 60%",
-			markers: true,
+			// markers: true,
 		}
 	});
 });

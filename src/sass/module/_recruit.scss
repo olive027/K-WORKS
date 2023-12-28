@@ -4,7 +4,11 @@
 	background-color: #fffae6;
 	border-radius: 0 rem(100) rem(100) 0;
 	position: relative;
+	margin-top: rem(160);
+	padding-top: rem(240);
+	margin-bottom: 0;
 	@include mq(md){
+		margin-top: rem(120);
 		border-radius: 0 rem(60) rem(60) 0;
 	}
 }
@@ -16,14 +20,6 @@
 	@include mq(md){
 		width: rem(330);
 		top: 4%;
-	}
-}
-
-.recruit__inner {
-	padding-top: rem(240);
-	padding-bottom: 0;
-	@include mq(md){
-		padding-top: rem(120);
 	}
 }
 

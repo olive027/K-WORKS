@@ -2,24 +2,19 @@
 
 .news {
 	position: relative;
+	margin-top: rem(320);
+	@include mq(md){
+		margin-top: rem(120);
+	}
 }
 .news__bg-text {
 	position: absolute;
-	top: 9%;
+	top: -22%;
 	left: 0;
 	@include mq(md){
 		top: 6%;
 		left: initial;
 		right: 0;
-	}
-}
-
-.news__inner {
-	padding-top: rem(240);
-	padding-bottom: rem(180);
-	@include mq(md){
-		padding-top: rem(120);
-    padding-bottom: rem(90);
 	}
 }
 

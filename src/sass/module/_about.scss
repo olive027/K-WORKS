@@ -1,24 +1,20 @@
 @use "global" as *;
 .about {
 	position: relative;
+	margin-top: rem(240);
+	@include mq(md){
+		margin-top: rem(120);
+	}
 }
 
 .about__bg-text {
 	position: absolute;
-	top: 5%;
+	top: -13%;
 	left: 0;
 	@include mq(md){
 		top: 4%;
 		left: initial;
 		right: 0;
-	}
-}
-.about__inner {
-	padding-top: rem(240);
-	padding-bottom: rem(180);
-	@include mq(md){
-		padding-top: rem(120);
-    padding-bottom: rem(90);
 	}
 }
 

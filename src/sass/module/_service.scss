@@ -4,27 +4,21 @@
 	background: #d6efff;
 	border-radius: 0 rem(100) rem(100) 0;
 	position: relative;
+	margin-top: rem(320);
+	padding-bottom: rem(80);
 	@include mq(md){
 		border-radius: 0 rem(60) rem(60) 0;
+		margin-top: rem(120);
 	}
 }
 
 .service__bg-text {
 	position: absolute;
-	top: 4%;
+	top: -7%;
 	left: 0;
 	@include mq(md){
 		top: 2%;
 }
-}
-
-.service__inner {
-	padding-top: rem(240);
-	padding-bottom: rem(180);
-	@include mq(md){
-		padding-top: rem(120);
-    padding-bottom: rem(90);
-	}
 }
 
 .service__items {
