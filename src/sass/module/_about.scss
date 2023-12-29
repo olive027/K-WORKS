@@ -12,9 +12,7 @@
 	top: -13%;
 	left: 0;
 	@include mq(md){
-		top: 4%;
-		left: initial;
-		right: 0;
+		top: -9%;
 	}
 }
 
@@ -42,12 +40,15 @@
 		font-size: rem(18);
 		line-height: 1.8;
 		letter-spacing: 0.02em;
-		margin-top: rem(140);
+		margin-top: rem(70);
 	}
 }
 
 .about__text-p {
 	margin-top: rem(30);
+	@include mq(md){
+		margin-top: rem(10);
+	}
 }
 
 .about__text-main {

@@ -8,7 +8,8 @@
 	padding-top: rem(240);
 	margin-bottom: 0;
 	@include mq(md){
-		margin-top: rem(120);
+		margin-top: rem(140);
+		padding-top: rem(140);
 		border-radius: 0 rem(60) rem(60) 0;
 	}
 }
@@ -19,7 +20,7 @@
 	left: 0;
 	@include mq(md){
 		width: rem(330);
-		top: 4%;
+		top: 6%;
 	}
 }
 

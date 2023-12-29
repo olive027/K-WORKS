@@ -4,7 +4,7 @@
 	position: relative;
 	margin-top: rem(320);
 	@include mq(md){
-		margin-top: rem(120);
+		margin-top: rem(210);
 	}
 }
 .news__bg-text {
@@ -12,9 +12,7 @@
 	top: -22%;
 	left: 0;
 	@include mq(md){
-		top: 6%;
-		left: initial;
-		right: 0;
+		top: -13%;
 	}
 }
 

@@ -270,7 +270,7 @@ gsap.utils.toArray('.js-body').forEach((t) => {
 		duration: 1,
 		scrollTrigger: {
 			trigger: t,
-			start: "top 60%",
+			start: "top 70%",
 			// markers: true,
 		}
 	});
