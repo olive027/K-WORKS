@@ -20,14 +20,24 @@
 }
 
 .mv__title {
-	font-size: clamp(rem(50), 6vw, rem(90));
-	letter-spacing: 0.05em;
+	font-size: clamp(2rem, 1.164rem + 3.57vw, 4.375rem);
+	letter-spacing: 0.03em;
 	color: $blue;
-	text-shadow: 1px 1px 3px #aaa;
 	font-weight: 900;
 	@include mq(md){
-		line-height: 1.2;
+		line-height: 1.4;
+		text-align: right;
 	}
+}
+
+.mv__title span {
+	font-size: clamp(4.5rem, 3.268rem + 5.26vw, 8rem);
+	background-image: -moz-linear-gradient(138deg, rgba(108, 199, 244, 1) 2%, rgba(247, 251, 118, 1) 40%, rgba(251, 197, 85, 1) 68%, rgba(59, 162, 241, 1) 97%);
+	background-image: -webkit-linear-gradient(138deg, rgba(108, 199, 244, 1) 2%, rgba(247, 251, 118, 1) 40%, rgba(251, 197, 85, 1) 68%, rgba(59, 162, 241, 1) 97%);
+	background-image: linear-gradient(138deg, rgba(108, 199, 244, 1) 2%, rgba(247, 251, 118, 1) 40%, rgba(251, 197, 85, 1) 68%, rgba(59, 162, 241, 1) 97%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 // .mv__title-left {

@@ -3,32 +3,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 //======================== mvタイトルアニメーション=====================
 //=====================================================================
-gsap.registerPlugin(ScrollTrigger);
-// mvタイトルアニメーション(上段)
-  const target = document.querySelectorAll(".mv__title");
-  target.forEach( function (target) {
-      let nodes = [...target.childNodes];
-      let textBox = '';
-      nodes.forEach( function (nodes) {
-      if (nodes.nodeType == 3) { //テキストの場合
-          let text = nodes.textContent.replace(/\r?\n/g, ''); //テキストから改行コード削除
-					text.split('').forEach(function (t, i) {
-						if (t !== " ") {
-								textBox += '<span>' + t + '</span>';
-						} else {
-							textBox += t;
-						}
-					})
-			} else if (nodes.contains(nodes) == true) { // テキストではなく、子ノード(=span要素)を持つ
-				// そのまま連結
-				textBox = textBox + nodes.outerHTML;
-			} else { // テキストではなく、br要素などspan要素以外の要素を持つ
-				// そのまま連結　※br要素などをspan要素とは別に処理する場合はここに書く
-				textBox = textBox + nodes.outerHTML;
-			}
-		});
-		target.innerHTML = textBox;
-});
+// gsap.registerPlugin(ScrollTrigger);
+// // mvタイトルアニメーション(上段)
+//   const target = document.querySelectorAll(".mv__title");
+//   target.forEach( function (target) {
+//       let nodes = [...target.childNodes];
+//       let textBox = '';
+//       nodes.forEach( function (nodes) {
+//       if (nodes.nodeType == 3) { //テキストの場合
+//           let text = nodes.textContent.replace(/\r?\n/g, ''); //テキストから改行コード削除
+// 					text.split('').forEach(function (t, i) {
+// 						if (t !== " ") {
+// 								textBox += '<span>' + t + '</span>';
+// 						} else {
+// 							textBox += t;
+// 						}
+// 					})
+// 			} else if (nodes.contains(nodes) == true) { // テキストではなく、子ノード(=span要素)を持つ
+// 				// そのまま連結
+// 				textBox = textBox + nodes.outerHTML;
+// 			} else { // テキストではなく、br要素などspan要素以外の要素を持つ
+// 				// そのまま連結　※br要素などをspan要素とは別に処理する場合はここに書く
+// 				textBox = textBox + nodes.outerHTML;
+// 			}
+// 		});
+// 		target.innerHTML = textBox;
+// });
+
 
 //======================== 背景円アニメーション=====================
 //=====================================================================
@@ -113,7 +114,7 @@ tl.to(".mv__bg-circle",{
 	duration: 1.8,
 	ease: "none",
 }, "<")
-.fromTo(".mv__title span", { //MVタイトルアニメーション
+.fromTo(".mv__title", 1.3,{ //MVタイトルアニメーション
     autoAlpha: 0,
 		y: '50px',
 },{
