@@ -1,41 +1,15 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-//======================== mvタイトルアニメーション=====================
-//=====================================================================
-// gsap.registerPlugin(ScrollTrigger);
-// // mvタイトルアニメーション(上段)
-//   const target = document.querySelectorAll(".mv__title");
-//   target.forEach( function (target) {
-//       let nodes = [...target.childNodes];
-//       let textBox = '';
-//       nodes.forEach( function (nodes) {
-//       if (nodes.nodeType == 3) { //テキストの場合
-//           let text = nodes.textContent.replace(/\r?\n/g, ''); //テキストから改行コード削除
-// 					text.split('').forEach(function (t, i) {
-// 						if (t !== " ") {
-// 								textBox += '<span>' + t + '</span>';
-// 						} else {
-// 							textBox += t;
-// 						}
-// 					})
-// 			} else if (nodes.contains(nodes) == true) { // テキストではなく、子ノード(=span要素)を持つ
-// 				// そのまま連結
-// 				textBox = textBox + nodes.outerHTML;
-// 			} else { // テキストではなく、br要素などspan要素以外の要素を持つ
-// 				// そのまま連結　※br要素などをspan要素とは別に処理する場合はここに書く
-// 				textBox = textBox + nodes.outerHTML;
-// 			}
-// 		});
-// 		target.innerHTML = textBox;
-// });
 
-
-//======================== 背景円アニメーション=====================
+//======================== mvアニメーション=====================
 //=====================================================================
-//circleの初期値
-gsap.set(".mv__bg-circle", {
-  autoAlpha: 0
+//初期値
+gsap.set('.mv__title', {
+	y: 50,
+});
+gsap.set('.header', {
+	y: -50,
 });
 
 //timeline
@@ -43,7 +17,7 @@ var tl = gsap.timeline();
 
 tl.to(".mv__bg-circle",{
 	autoAlpha: 1,
-	delay: 1,
+	delay: 0.3,
 	ease: "power4.inOut",
   stagger: {
 		// each: 0.5, // 0.5秒遅れて順番に再生
@@ -114,21 +88,14 @@ tl.to(".mv__bg-circle",{
 	duration: 1.8,
 	ease: "none",
 }, "<")
-.fromTo(".mv__title", 1.3,{ //MVタイトルアニメーション
-    autoAlpha: 0,
-		y: '50px',
-},{
-		autoAlpha: 1,
+.to(".mv__title", 1.3,{ //MVタイトルアニメーション
+  	autoAlpha: 1,
 		y: '0px',
-		stagger: 0.07, // 0.1秒遅れて順番に再生
   },"-=5%")
-	.fromTo('.header', {
-		autoAlpha: 0,
-		y: 50,
-	},{
-		autoAlpha: 1,
-		y: 0,
-	});
+.to('.header', {
+	autoAlpha: 1,
+	y: 0,
+});
 
 	//======================== section-titleアニメーション====================================================================
 //=====================================================================

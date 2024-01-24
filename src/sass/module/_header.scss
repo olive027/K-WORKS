@@ -9,6 +9,8 @@
 	// background: #fff;
 	z-index: 9999;
 	transition: 0.4s background;
+	opacity: 0;
+	visibility: hidden;
 	@include mq(md){
 		width: 100%;
 	}

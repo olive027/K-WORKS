@@ -24,6 +24,8 @@
 	letter-spacing: 0.03em;
 	color: $blue;
 	font-weight: 900;
+	opacity: 0;
+	visibility: hidden;
 	@include mq(md){
 		line-height: 1.4;
 		text-align: right;
@@ -40,43 +42,8 @@
 	color: transparent;
 }
 
-// .mv__title-left {
-// 	top: 35%;
-// 	left: 10%;
-// 	@include mq(md){
-// 		left: 5%;
-// 	}
-// }
-// .mv__title-right {
-// 	top: 50%;
-// 	right: 10%;
-// 	@include mq(md){
-// 		right: 5%;
-// 		margin-top: rem(20);
-// 	}
-// }
-
-// .mv__title-left span,
-// .mv__title-right span {
-// 	background-image: -moz-linear-gradient(35deg, rgba(46, 121, 251, 1), rgba(140, 194, 251, 1) 47%, rgba(193, 213, 255, 1) 67%, rgba(28, 111, 255, 1) 98%);
-// 	background-image: -webkit-linear-gradient(35deg, rgba(46, 121, 251, 1), rgba(140, 194, 251, 1) 47%, rgba(193, 213, 255, 1) 67%, rgba(28, 111, 255, 1) 98%);
-// 	background-image: linear-gradient(35deg, rgba(46, 121, 251, 1), rgba(140, 194, 251, 1) 47%, rgba(193, 213, 255, 1) 67%, rgba(28, 111, 255, 1) 98%);
-// 	background-clip: text;
-// 	-webkit-background-clip: text;
-// 	color: transparent;
-// 	font-size: rem(120);
-// 	text-shadow: none;
-// 	text-transform: capitalize;
-// 	@include mq(md){
-// 		font-size: rem(50);
-// 	}
-// }
-
-// .mv__info {
-// 	position: absolute;
-// 	bottom: 0;
-// 	right: 0;
-// 	z-index: 2;
-// }
-
+.mv__bg-circle {
+	opacity: 0;
+	visibility: hidden;
+}
 
