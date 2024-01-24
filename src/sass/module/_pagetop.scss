@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.page-top a {
+  background-color: $blue;
+  width: rem(50);
+	height: rem(50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+	z-index: 2;
+}
+
+.page-top a:hover {
+	opacity: .6;
+}
+
+.page-top img {
+	width: 40%;
+	object-fit: contain;
+}

@@ -1,16 +1,5 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-	// swiper
-	// const swiper = new Swiper(".swiper1", {
-	// 	loop: true,
-	// 	autoplay: {
-	// 		delay: 2500,
-	// 		disableOnInteraction: false,
-	// 	},
-	// 	effect: 'fade',
-	// 	speed: 2500,
-	// 	allowTouchMove: false,
-	// });
 
 	// recruitのswiper
 	const swiper = new Swiper(".swiper", {
@@ -51,6 +40,26 @@ $('.js-hamburger').click(function(){
 	$('html').toggleClass('is-fixed'); //ハンバーガー展開時に背景を固定
 	$('.js-sp-nav').toggleClass('is-active'); //右からメニューが出てくる等の場合はこっちの記述
 });
+
+//ページトップボタン
+const pageTop = $(".page-top");
+  pageTop.hide(); // 最初はボタンを非表示にする
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) { // 100pxスクロールしたら表示
+      pageTop.fadeIn(); // 100px以上スクロールしたらボタンをフェードイン
+    } else {
+      pageTop.fadeOut(); // 100px以下になったらボタンをフェードアウト
+    }
+  });
+  pageTop.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0, // 上から0pxの位置に戻る
+      },
+      500 // 500ミリ秒かけて戻る
+    );
+    return false;
+  });
 
 
 
